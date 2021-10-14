@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+xfqs3j5q1uk(2&vhq$vg3y(-fmrzvjy9+hpcq0-!8bis-51bl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['umyuconnect-api.herokuapp.com', 'umyuconnect.netlify.app']
 
 
 # Application definition
