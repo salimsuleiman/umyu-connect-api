@@ -1,1 +1,1 @@
-web: gunicorn task_tracker.wsgi
+web: gunicorn weebee.wsgi
