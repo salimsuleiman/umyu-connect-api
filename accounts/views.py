@@ -18,7 +18,7 @@ def GetUser(request):
 @api_view(['POST'])
 @authentication_classes([])
 @permission_classes([])
-def Login(request):
+def Login(request):................................................................................................................................
     user = authenticate(username=request.data['username'], password=request.data['password'])
     if user is None:
         return Response({'Detail': 'Wrong Credentials'}, 400)

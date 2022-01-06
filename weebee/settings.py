@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+xfqs3j5q1uk(2&vhq$vg3y(-fmrzvjy9+hpcq0-!8bis-51bl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['umyuconnect-api.herokuapp.com', 'umyuconnect.netlify.app']
+ALLOWED_HOSTS = ['*', 'umyuconnect-api.herokuapp.com', 'umyuconnect.netlify.app']
 
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'weebee.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,13 +78,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'weebee.wsgi.application'
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [
-    #     'rest_framework.authentication.TokenAuthentication',
-    # ],
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.IsAuthenticated',
-    # ]
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ]
 }
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
