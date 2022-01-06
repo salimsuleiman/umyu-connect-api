@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+xfqs3j5q1uk(2&vhq$vg3y(-fmrzvjy9+hpcq0-!8bis-51bl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'umyuconnect-api.herokuapp.com', 'umyuconnect.netlify.app']
 
